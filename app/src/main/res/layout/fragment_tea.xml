@@ -3,14 +3,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".fragmentTea"
     android:background="#0BE415"
-    >
+    tools:context=".fragmentTea">
 
-    <TextView
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerTea"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="MACACO"
-        android:gravity="center"/>
+        android:layout_height="match_parent" />
 
 </FrameLayout>

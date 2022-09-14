@@ -10,6 +10,8 @@ import android.view.MenuItem;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationBarView;
 
+import java.util.List;
+
 public class MainActivity extends AppCompatActivity {
 
     BottomNavigationView bottomNavigationView;
@@ -17,6 +19,8 @@ public class MainActivity extends AppCompatActivity {
     fragmentTea fragmentTea = new fragmentTea();
     fragmentMuffin fragmentMuffin = new fragmentMuffin();
     fragmentDonuts fragmentDonuts = new fragmentDonuts();
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
