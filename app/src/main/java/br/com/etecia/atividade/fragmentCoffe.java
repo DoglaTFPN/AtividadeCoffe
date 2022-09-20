@@ -3,6 +3,7 @@ package br.com.etecia.atividade;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.view.LayoutInflater;
@@ -23,14 +24,19 @@ public class fragmentCoffe extends Fragment {
         // Inflate the layout for this fragment
         View v = inflater.inflate(R.layout.fragment_coffe, container, false);
 
+        RecyclerView mRecyclerView = v.findViewById(R.id.recyclerCoffe);
+
         lstCafes = new ArrayList<>();
 
-        lstCafes.add(new Cafe("Black Cock",R.drawable.coffeimg, "café gostoso pra carai"));
-        lstCafes.add(new Cafe("Pingado",R.drawable.cafepingado, "café gostoso pra carai"));
-        lstCafes.add(new Cafe("Black cofi",R.drawable.coffeimg, "café gostoso pra carai"));
-        lstCafes.add(new Cafe("CAFEZIN",R.drawable.cafepingado, "café gostoso pra carai"));
+        lstCafes.add(new Cafe("Café Preto",R.drawable.coffeimg, "Café Preto 250ml"));
+        lstCafes.add(new Cafe("Café Pingado",R.drawable.cafepingado, "Café Pingado 250ml"));
+        lstCafes.add(new Cafe("Café Cortado",R.drawable.cafecortado, "Café Cortado 250ml "));
+        lstCafes.add(new Cafe("Café Au Lait",R.drawable.cafecomleite, "Café Com Leite 250ml"));
 
-        RecyclerView mRecyclerView = findViewById(R.id.recyclerCoffe);
+        RecyclerViewAdapter recyclerViewAdapter = new RecyclerViewAdapter(getContext(), lstCafes);
+        mRecyclerView.setLayoutManager(new GridLayoutManager(getContext(),2));
+        mRecyclerView.hasFixedSize();
+        mRecyclerView.setAdapter(recyclerViewAdapter);
 
         return v;
     }
