@@ -31,7 +31,7 @@ public class AdapterCoffe extends  RecyclerView.Adapter<AdapterCoffe.MyViewHolde
         View view;
 
         LayoutInflater mInflater = LayoutInflater.from(mContext);
-        view = mInflater.inflate(R.layout.modelo_itens, parent, false);
+        view = mInflater.inflate(R.layout.modelo_coffe, parent, false);
 
         return new MyViewHolder(view);
     }

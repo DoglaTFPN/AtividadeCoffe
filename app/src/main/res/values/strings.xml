@@ -2,4 +2,6 @@
     <string name="app_name">Atividade</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="donut_tradicional">Donut Tradicional</string>
+    <string name="donut_de_morango">Donut de Morango</string>
 </resources>
