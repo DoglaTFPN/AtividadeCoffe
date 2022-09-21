@@ -37,13 +37,16 @@ public class AdapterDonut extends RecyclerView.Adapter<AdapterDonut.ViewHolderDo
     }
 
     @Override
-    public void onBindViewHolder(@NonNull AdapterDonut.ViewHolderDonut holder, int position) {
-
+    public void onBindViewHolder(@NonNull AdapterDonut.ViewHolderDonut holder, final int position) {
+        //passando valores para o RecyclerView
+        holder.TvNomeDonut.setText(dData.get(position).getTxtNomeDonut());
+        holder.TvimgDonut.setImageResource(dData.get(position).getIdImgDonut());
+        holder.TvdescDonut.setText(dData.get(position).getDescDonut());
     }
 
     @Override
     public int getItemCount() {
-        return 0;
+        return dData.size();
     }
 
     public static class ViewHolderDonut extends RecyclerView.ViewHolder {
