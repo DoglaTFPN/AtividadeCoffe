@@ -12,14 +12,14 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.List;
 
-public class RecyclerViewAdapter extends  RecyclerView.Adapter<RecyclerViewAdapter.MyViewHolder> {
+public class AdapterCoffe extends  RecyclerView.Adapter<AdapterCoffe.MyViewHolder> {
 
     private Context mContext; //É a classe onde estou
     private List<Cafe> mData; //O objeto que irá representar os dados
 
 
     //Construtor da classe
-    public RecyclerViewAdapter(Context mContext, List<Cafe> mData) {
+    public AdapterCoffe(Context mContext, List<Cafe> mData) {
         this.mContext = mContext;
         this.mData = mData;
     }

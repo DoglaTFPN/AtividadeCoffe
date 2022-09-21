@@ -33,7 +33,7 @@ public class fragmentCoffe extends Fragment {
         lstCafes.add(new Cafe("Café Cortado",R.drawable.cafecortado, "Café Cortado 250ml "));
         lstCafes.add(new Cafe("Café Au Lait",R.drawable.cafecomleite, "Café Com Leite 250ml"));
 
-        RecyclerViewAdapter recyclerViewAdapter = new RecyclerViewAdapter(getContext(), lstCafes);
+        AdapterCoffe recyclerViewAdapter = new AdapterCoffe(getContext(), lstCafes);
         mRecyclerView.setLayoutManager(new GridLayoutManager(getContext(),2));
         mRecyclerView.hasFixedSize();
         mRecyclerView.setAdapter(recyclerViewAdapter);
